@@ -93,10 +93,10 @@ type Mutation{
 
 var root = {
   restaurant: (arg) => {
-    // Your code goes here
+    restaurants[arg.id]
   },
   restaurants: () => {
-    // Your code goes here
+    restaurants
   },
   setrestaurant: ({ input }) => {
     // Your code goes here
