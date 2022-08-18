@@ -1,4 +1,5 @@
 var { graphqlHTTP } = require("express-graphql");
+
 var { buildSchema, assertInputType } = require("graphql");
 var express = require("express");
 
@@ -93,10 +94,10 @@ type Mutation{
 
 var root = {
   restaurant: (arg) => {
-    restaurants[arg.id]
+    // Your code goes here
   },
   restaurants: () => {
-    restaurants
+    // Your code goes here
   },
   setrestaurant: ({ input }) => {
     // Your code goes here
@@ -119,5 +120,3 @@ app.use(
 );
 var port = 5500;
 app.listen(5500, () => console.log("Running Graphql on Port:" + port));
-
-export default root;
